@@ -1,0 +1,179 @@
+/* Modernes, stylisches Kanzlei-Design, dunkler Hintergrund mit elegantem Muster */
+:root {
+  --bg: #1c1f26;
+  --text: #e0e0e0;
+  --accent: #3b82f6;
+  --accent-dark: #1e40af;
+  --card: rgba(28,31,38,0.9);
+  --btn-bg: #3b82f6;
+  --btn-hover: #2563eb;
+  --btn-text: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg);
+  background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); /* subtiler Muster-Hintergrund */
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+.header {
+  background: var(--card);
+  padding: 25px 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.7);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--accent);
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+}
+.nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  position: relative;
+}
+.nav a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background: var(--accent);
+  transition: 0.3s;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+.nav a:hover::after {
+  width: 100%;
+}
+.nav a:hover {
+  color: var(--accent);
+}
+
+/* Hero Section */
+.hero {
+  padding: 140px 0;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(59,130,246,0.85), rgba(30,64,175,0.85)), url('https://www.transparenttextures.com/patterns/cubes.png');
+  background-blend-mode: overlay;
+  color: #fff;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+}
+.hero h2 {
+  font-size: 50px;
+  font-weight: 900;
+  margin-bottom: 15px;
+  text-shadow: 3px 3px 15px rgba(0,0,0,0.6);
+}
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.btn {
+  display: inline-block;
+  padding: 16px 35px;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(59,130,246,0.5);
+  transition: 0.4s;
+}
+.btn:hover {
+  background: var(--btn-hover);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(59,130,246,0.7);
+}
+
+/* Sections */
+.section {
+  padding: 90px 0;
+}
+.section h2 {
+  font-size: 38px;
+  margin-bottom: 35px;
+  text-align: center;
+  color: var(--accent);
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+.service-card {
+  background: var(--card);
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.6);
+  transition: 0.5s;
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+.service-card h3 {
+  margin-bottom: 15px;
+  color: var(--accent);
+}
+.service-card p {
+  color: var(--text);
+}
+.service-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.8);
+}
+
+/* Contact Card */
+.contact-card {
+  background: var(--card);
+  padding: 45px;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.7);
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+.contact-card a.btn {
+  margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 30px 0;
+  background: var(--card);
+  font-size: 15px;
+  color: var(--text);
+  box-shadow: 0 -3px 15px rgba(0,0,0,0.6);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+  }
+  .nav a { margin: 10px 0; }
+}
